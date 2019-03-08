@@ -1,4 +1,8 @@
-
+<?php if (array_key_exists("submit", $_POST)) {
+        
+       header("Location: indexforemployer.php");
+}
+    ?>
 <html>
     <head>
         <title>
@@ -83,6 +87,24 @@
     
     </head>
     <body>
+        <div class="modal hide in" id="myModal">
+            <div class="modal" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+        </div>
             <div id="blue" ><div class="container pjt" autofocus><a autofocus></a><h1 class="pjt">Post a job</h1><p class="pjt">Tell us What we can do</p></div></div>
             <div id="white">
                     <form method="post">
@@ -246,6 +268,12 @@
         $("#btn3").click(function(){
             $("#final_post").css("display","block");
         })
+        $(document).ready(function() {
+   var referrer =  document.referrer;
+           if(referrer=="http://localhost/clgMinor/signinpage.php"){
+                $('.modal').modal('show');
+           }
+            });
         
         </script>    
     

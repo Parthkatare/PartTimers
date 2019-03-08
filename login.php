@@ -49,6 +49,10 @@
               position: relative;
               top:-50px;
           }
+           .form-control:focus {
+                border-color: #FFC107;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 193, 7, 0.6);
+                }
       
 
       
@@ -61,7 +65,7 @@
      <div class="container">
          <div id="uptext" >Login to PartTimers</div>
          <?php if(!$error==""){
-         echo '<div class="alert alert-danger" role="alert" id="error">'.$error.'</div>';}
+         echo '<div class="alert alert-danger " role="alert" id="error">'.$error.'</div>';}
             ?>
          
          
@@ -78,7 +82,7 @@
             <input type="password" class="form-control" id="Password" placeholder="Password" name="password">
           </div>
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="Check" name="stayLoggedIn">
+            <input type="checkbox" class="form-check-input" id="Check" name="stayLoggedIn" checked>
             <label class="form-check-label" for="Check">Stay logged in</label>
           </div>
             <div class="form-group form-check">

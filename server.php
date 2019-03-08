@@ -127,7 +127,7 @@
 
                             } 
 
-                            header("Location: loggedinpage.php");
+                            header("Location: indexforemployer.php");
                                 
                         } else {
                             
